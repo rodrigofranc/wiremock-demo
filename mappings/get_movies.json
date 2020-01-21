@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/movies"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "response_ok_movies.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}
