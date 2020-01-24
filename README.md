@@ -1,26 +1,22 @@
 ### Introduction
 
->**WireMock**  is a library for stubbing and mocking web services. It constructs a HTTP server that we could connect to as we would to an actual web service.
+>**WireMock**  is a library for stubbing and mocking web services. It provides a HTTP server that we could connect to as we would to an actual web service.
 When a  [WireMock](http://wiremock.org/)  server is in action, we can set up expectations, call the service, and then verify its behaviors.
 
 #### Necessary files
 
-To run our server, we need the standalone JAR provided by Wiremock, we can download this file with the following command:
-
-` wget http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standalone/2.5.1/wiremock-standalone-2.5.1.jar `
-
-For test and run our server, we can do:
+To run our server, you only need to execute this command:
 
 `java -jar wiremock-standalone-2.5.1.jar `
 
 #### Requests and response mapping
 
-Once we have raised the server, we will see two new directories: **mapping** and **__files**
+We can see two directories in the project: **mapping** and **__files**
 
 - mapping: contains files in JSON format with the combinations of request you attend and the responses you have to give.
 - __files: Contains the files with the content of the responses, and which are referenced from the mappings.
 
-To create our first mapping, we add a json file in mapping folder with the following content:
+To create our first mapping, we add a JSON file in mapping folder with the following content:
 
 ````json
 {
@@ -60,7 +56,7 @@ The `bodyFileName` field indicates the path to the `json` format file in the __f
 ```
 In this mapping we are indicating a request of type **GET** and status code **200** to the path `/movies`, which will response with a list of movies.
 
-For each mapping we would like to have, it will only be necessary to add our json file into the mapping directory.
+For each mapping we would like to have, it will only be necessary to add our JSON file into the mapping directory.
 
 ### Request Matching
 
